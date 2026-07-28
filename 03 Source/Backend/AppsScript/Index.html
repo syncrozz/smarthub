@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KPMBP SmartHub</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <?!= include("Style"); ?>
+</head>
+
+<body>
+
+  <div class="container-fluid py-4">
+
+    <!-- DASHBOARD -->
+    <?!= include("Dashboard"); ?>
+    <?!= include("ProfileModal"); ?>
+    <?!= include("CommitteeModal"); ?>
+
+    <!-- STAFF DIRECTORY -->
+    <div class="card p-4 mt-4 mb-4">
+
+      <div class="row align-items-center g-3 mt-9 justify-content-center">
+
+        <!-- Search -->
+        <div class="col-lg-6">
+          <div class="input-group search-box">
+            <span class="input-group-text">
+              <i class="bi bi-search"></i>
+            </span>
+
+            <input
+              id="searchInput"
+              type="text"
+              class="form-control"
+              placeholder="Cari Nama, Tahun Lahir, No. Plat atau No. Telefon...">
+          </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="col-lg-3">
+          <select id="departmentFilter" class="form-select toolbar-select">
+            <option value="">🏢 Semua Bahagian</option>
+          </select>
+        </div>
+
+        <!-- Counter -->
+        <div class="col-lg-1">
+          <span class="badge staff-counter w-100">
+            <i class="bi bi-people-fill me-2"></i>
+            <span id="staffCount">0</span>
+          </span>
+        </div>
+
+        <!-- Reset -->
+        <div class="col-lg-1">
+          <button id="btnReset" class="btn btn-outline-secondary w-100">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- STAFF LIST -->
+    <div id="staffList" class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+      <div class="col-12 text-center">
+        Loading...
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <?!= include("Script"); ?>
+
+</body>
+
+</html>

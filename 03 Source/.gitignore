@@ -1,0 +1,20 @@
+# Google Drive shortcuts
+*.gsheet
+*.gdoc
+*.gslides
+*.gform
+*.gdraw
+*.gsite
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
