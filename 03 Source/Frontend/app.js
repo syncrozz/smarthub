@@ -11,6 +11,8 @@ class SyncrozzApp {
 
         await this.loadCoreComponents();
 
+        await Staff.init();
+
         console.log("✅ SmartHub Ready");
 
     }
