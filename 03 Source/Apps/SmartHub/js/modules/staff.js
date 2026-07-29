@@ -400,40 +400,51 @@ const Staff = (() => {
                 x => String(x.id) === String(id)
             );
 
-            if (!staff) return;
+           if (!staff) return;
 
-            document.getElementById("modalNama").textContent =
-                staff.nama || "-";
+const get = (id) => {
+    const el = document.getElementById(id);
 
-            document.getElementById("modalJawatan").textContent =
-                staff.jawatan || "-";
+    console.log(id, el);
 
-            document.getElementById("modalJawatanInfo").textContent =
-                staff.jawatan || "-";
+    if (!el) {
+        throw new Error(`Element tidak dijumpai: ${id}`);
+    }
 
-            document.getElementById("modalGred").textContent =
-                staff.gred || "-";
+    return el;
+};
 
-            document.getElementById("modalPhoto").src =
-                staff.photo || CONFIG.DEFAULT_AVATAR;
+get("modalNama").textContent =
+    staff.nama || "-";
 
-            document.getElementById("modalBahagian").textContent =
-                staff.bahagian || "-";
+get("modalJawatan").textContent =
+    staff.jawatan || "-";
 
-            document.getElementById("modalTelefon").textContent =
-                staff.telefon || "-";
+get("modalJawatanInfo").textContent =
+    staff.jawatan || "-";
 
-            document.getElementById("modalKelulusan").innerHTML =
-                formatList(staff.kelulusan);
+get("modalGred").textContent =
+    staff.gred || "-";
 
-            document.getElementById("modalPengkhususan").innerHTML =
-                formatList(staff.pengkhususan);
+get("modalPhoto").src =
+    staff.photo || CONFIG.DEFAULT_AVATAR;
 
-            document.getElementById("modalDaerahAsal").textContent =
-                staff.daerahAsal || "-";
+get("modalBahagian").textContent =
+    staff.bahagian || "-";
 
-            const email =
-                document.getElementById("modalEmail");
+get("modalTelefon").textContent =
+    staff.telefon || "-";
+
+get("modalKelulusan").innerHTML =
+    formatList(staff.kelulusan);
+
+get("modalPengkhususan").innerHTML =
+    formatList(staff.pengkhususan);
+
+get("modalDaerahAsal").textContent =
+    staff.daerahAsal || "-";
+
+const email = get("modalEmail");
 
             if (staff.email) {
 

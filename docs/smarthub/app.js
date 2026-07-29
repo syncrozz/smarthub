@@ -46,11 +46,15 @@ class ComponentLoader {
 
     static async load(path, target) {
 
+        console.log("📦 Loading:", path);
+
         const response = await fetch(path);
+
+        console.log("📡 Status:", response.status);
 
         if (!response.ok) {
 
-            console.error(`Component not found : ${path}`);
+            console.error(`❌ Component not found: ${path}`);
 
             return;
 
@@ -58,7 +62,23 @@ class ComponentLoader {
 
         const html = await response.text();
 
-        document.querySelector(target).innerHTML = html;
+        console.log("📄 HTML Length:", html.length);
+
+        const container = document.querySelector(target);
+
+        console.log("📍 Container:", container);
+
+        if (!container) {
+
+            console.error(`❌ Target container not found: ${target}`);
+
+            return;
+
+        }
+
+        container.innerHTML = html;
+
+        console.log("✅ Loaded:", path);
 
     }
 
