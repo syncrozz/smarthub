@@ -20,7 +20,13 @@ const Committee = (() => {
 
         API.getStaffCommittee(staff.id)
 
-            .then(render)
+    .then(data => {
+
+        console.log("Committee Response:", data);
+
+        render(data);
+
+    })
 
             .catch(error => {
 
