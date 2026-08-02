@@ -11,8 +11,6 @@ const Committee = (() => {
 
     function show(staff) {
 
-        debugger;
-
         console.log("✅ Committee.show()", staff);
 
         if (!staff || !staff.id) {
