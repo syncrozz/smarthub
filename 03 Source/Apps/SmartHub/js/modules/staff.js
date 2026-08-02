@@ -299,7 +299,7 @@ const Staff = (() => {
 
         return `
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-6 mb-4">
+<div class="col-12 col-md-6 col-xl-3 mb-4">
 
 <div
     class="staff-card fade-in"
