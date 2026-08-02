@@ -1367,17 +1367,37 @@ small{
 
 }
 
-@media(max-width:576px){
+@media (max-width:576px){
 
-    .search-box{
+    .search-box .form-control{
 
-        height:54px;
+        height:52px;
+
+        line-height:52px;
+
+        padding-top:0;
+
+        padding-bottom:0;
+
+        font-size:16px;
 
     }
 
-    .stats-value{
+    .search-box .input-group-text{
 
-        font-size:28px;
+        height:52px;
+
+        padding:0 14px;
+
+        display:flex;
+
+        align-items:center;
+
+    }
+
+    .search-box .input-group-text i{
+
+        font-size:20px;
 
     }
 
