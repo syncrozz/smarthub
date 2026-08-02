@@ -5,13 +5,17 @@
 
 class SyncrozzApp {
 
-    async init() {
+async init() {
 
     console.log("🚀 SmartHub Initializing...");
 
     await this.loadCoreComponents();
 
     await Staff.init();
+
+    // ============================================================
+    // Refresh Button
+    // ============================================================
 
     document
         .getElementById("btnRefresh")
@@ -22,6 +26,14 @@ class SyncrozzApp {
             await Staff.init();
 
         });
+
+    // ============================================================
+    // PWA Install
+    // ============================================================
+
+    if (window.PWAInstall?.init) {
+        window.PWAInstall.init();
+    }
 
     console.log("✅ SmartHub Ready");
 
