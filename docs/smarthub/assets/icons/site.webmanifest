@@ -1,28 +1,19 @@
 {
-  "name": "KPMBP SmartHub",
+  "name": "KPMBP Smart Hub",
   "short_name": "SmartHub",
-  "description": "Platform pintar kampus Kolej Profesional MARA Bandar Penawar.",
-
-  "start_url": "/smarthub/",
-  "scope": "/smarthub/",
-
-  "display": "standalone",
-
-  "theme_color": "#7C3AED",
-  "background_color": "#FFFFFF",
-
   "icons": [
     {
-      "src": "../images/web-app-manifest-192x192.png",
+      "src": "web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
-      "src": "../images/web-app-manifest-512x512.png",
+      "src": "web-app-manifest-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#0b2343",
+  "background_color": "#0b2343",
+  "display": "standalone"
 }
