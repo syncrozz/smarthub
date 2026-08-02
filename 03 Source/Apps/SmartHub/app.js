@@ -7,15 +7,25 @@ class SyncrozzApp {
 
     async init() {
 
-        console.log("🚀 SmartHub Initializing...");
+    console.log("🚀 SmartHub Initializing...");
 
-        await this.loadCoreComponents();
+    await this.loadCoreComponents();
 
-        await Staff.init();
+    await Staff.init();
 
-        console.log("✅ SmartHub Ready");
+    document
+        .getElementById("btnRefresh")
+        ?.addEventListener("click", async () => {
 
-    }
+            console.log("🔄 Refresh SmartHub");
+
+            await Staff.init();
+
+        });
+
+    console.log("✅ SmartHub Ready");
+
+}
 
     async loadCoreComponents() {
 
