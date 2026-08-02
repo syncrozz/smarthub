@@ -485,15 +485,14 @@ const email = get("modalEmail");
             }
 
             document
-                .getElementById("btnCommittee")
-                .onclick = () => {
+    .getElementById("btnCommittee")
+    .onclick = () => {
 
-                    console.log(
-                        "Committee:",
-                        staff.id
-                    );
+        console.log("🔥 NEW STAFF.JS");
 
-                };
+        Committee.show(staff);
+
+    };
 
             new bootstrap.Modal(
                 document.getElementById("profileModal")
