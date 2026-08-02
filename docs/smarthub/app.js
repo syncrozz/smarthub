@@ -78,7 +78,13 @@ class ComponentLoader {
 
         container.innerHTML = html;
 
-        console.log("✅ Loaded:", path);
+console.log("TARGET :", target);
+console.log("HTML LEN :", html.length);
+console.log("AFTER :", container.innerHTML.length);
+console.log("CHILDREN :", container.children.length);
+console.log("FIRST :", container.firstElementChild);
+
+console.log("✅ Loaded:", path);
 
     }
 
